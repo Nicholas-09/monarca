@@ -689,15 +689,38 @@ a { color: var(--color-teal); }
 }
 .sponsors-cta {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
+  gap: 10px;
   margin-top: 44px;
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 1.05rem;
   color: var(--color-ink);
+}
+.sponsors-cta-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-teal);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.sponsors-cta-link svg {
+  width: 22px;
+  height: 22px;
+  animation: sponsors-arrow-bounce 1.6s ease-in-out infinite;
+}
+.sponsors-cta-link:hover { color: var(--color-teal-dark); }
+@keyframes sponsors-arrow-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sponsors-cta-link svg { animation: none; }
 }
 
 /* ---------- CTA banner ---------- */
