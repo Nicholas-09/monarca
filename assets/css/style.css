@@ -589,8 +589,8 @@ a { color: var(--color-teal); }
   height: 3.1rem;
   position: relative;
   white-space: nowrap;
-  background: #000;
-  color: #fff;
+  background: #fff;
+  color: #000;
   margin: 50px 0;
 }
 .banner-track {
@@ -608,19 +608,13 @@ a { color: var(--color-teal); }
 .banner-item {
   display: flex;
   align-items: center;
-  color: #e2e8f0;
+  color: #000;
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.9rem;
-  background-color: #152c41;
   padding: 0.7rem 1rem;
   margin: 0 1rem;
-  border-radius: 0.4rem;
   white-space: nowrap;
-  box-shadow:
-    0 0.1rem 0.2rem #00000033,
-    0 0.1rem 0.5rem #0000004d,
-    0 0.2rem 1.5rem #00000066;
 }
 @media (prefers-reduced-motion: reduce) {
   .banner-track { animation: none; }
