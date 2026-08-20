@@ -335,6 +335,9 @@ a { color: var(--color-teal); }
   padding: 64px 0 80px;
   text-align: center;
 }
+.page-hero--compact {
+  padding: 40px 0 52px;
+}
 .page-hero .eyebrow {
   background: rgba(255,255,255,0.16);
   color: var(--color-white);
