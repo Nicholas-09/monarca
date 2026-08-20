@@ -685,6 +685,8 @@ a { color: var(--color-teal); }
   padding: 14px;
 }
 .marquee__item--cover {
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   padding: 0;
 }
