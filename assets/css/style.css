@@ -275,17 +275,21 @@ a { color: var(--color-teal); }
 .hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(160deg, var(--color-teal-dark) 0%, var(--color-teal) 55%, var(--color-primary) 140%);
+  background:
+    linear-gradient(100deg, rgba(20, 14, 10, 0.55) 0%, rgba(20, 14, 10, 0.22) 45%, rgba(20, 14, 10, 0.4) 100%),
+    url("../img/hero-bg.webp") left top / cover no-repeat;
   color: var(--color-white);
-  padding: 90px 0 110px;
+  padding: 100px 0 120px;
 }
 .hero .container {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 50px;
-  align-items: center;
+  display: flex;
+  justify-content: flex-end;
   position: relative;
   z-index: 2;
+}
+.hero-copy {
+  max-width: 620px;
+  text-align: left;
 }
 .hero-eyebrow {
   display: inline-block;
@@ -311,13 +315,6 @@ a { color: var(--color-teal); }
   margin-bottom: 32px;
 }
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
-.hero-art { position: relative; z-index: 2; }
-.hero-decor {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  opacity: 0.5;
-}
 
 .page-hero {
   background: linear-gradient(150deg, var(--color-teal-dark), var(--color-teal) 70%);
@@ -650,8 +647,8 @@ a { color: var(--color-teal); }
   .follow-us-arrow, .follow-us-label { display: none; }
   .lang-toggle button { padding: 5px 8px; font-size: 0.7rem; }
 
-  .hero .container { grid-template-columns: 1fr; }
-  .hero-art { order: -1; max-width: 340px; margin: 0 auto; }
+  .hero-copy { max-width: 100%; }
+  .hero { background-position: 75% center; }
 
   .feature-row { grid-template-columns: 1fr; }
   .feature-media { order: -1; }
