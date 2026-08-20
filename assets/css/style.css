@@ -391,6 +391,7 @@ a { color: var(--color-teal); }
   font-size: 0.98rem;
 }
 .feature-list svg { flex: none; width: 18px; height: 18px; margin-top: 3px; color: var(--color-teal); }
+.feature-list .flag-icon { flex: none; font-size: 1.15rem; line-height: 1; margin-top: 1px; }
 
 .feature-media {
   position: relative;
