@@ -582,63 +582,6 @@ a { color: var(--color-teal); }
 .timeline-item h4 { margin-bottom: 4px; }
 .timeline-item p { color: var(--color-text-soft); margin: 0; }
 
-/* ---------- Horizontal scrolling donate banner ---------- */
-.horizontal-scrolling-banner {
-  overflow: hidden;
-  width: 100%;
-  height: 3.1rem;
-  position: relative;
-  white-space: nowrap;
-  background: #000;
-  color: #fff;
-  margin: 50px 0;
-}
-.horizontal-scrolling-banner__helper-wrapper {
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
-  width: fit-content;
-  height: 100%;
-  white-space: nowrap;
-  position: relative;
-  left: 0;
-  transform: translateZ(0);
-  animation: horizontal-scrolling-loop 30s linear infinite;
-}
-@keyframes horizontal-scrolling-loop {
-  0% { transform: translateX(0%) translateZ(0); }
-  100% { transform: translateX(-50%) translateZ(0); }
-}
-.horizontal-scrolling-banner__fade {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #000, transparent 30%, transparent 90%, #000);
-  pointer-events: none;
-}
-.horizontal-scrolling-banner__item {
-  display: flex;
-  align-items: center;
-  gap: 0 0.35rem;
-  color: #e2e8f0;
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 0.9rem;
-  background-color: #152c41;
-  padding: 0.7rem 1rem;
-  margin: 0 1rem;
-  border-radius: 0.4rem;
-  white-space: nowrap;
-  box-shadow:
-    0 0.1rem 0.2rem #00000033,
-    0 0.1rem 0.5rem #0000004d,
-    0 0.2rem 1.5rem #00000066;
-}
-@media (prefers-reduced-motion: reduce) {
-  .horizontal-scrolling-banner__helper-wrapper { animation: none; }
-}
-
 /* ---------- CTA banner ---------- */
 .cta-banner {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
