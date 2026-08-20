@@ -640,6 +640,55 @@ a { color: var(--color-teal); }
   .banner-track { animation: none; }
 }
 
+/* ---------- Champion sponsors ---------- */
+.sponsors { overflow: hidden; }
+.marquee-wrap {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+}
+.marquee {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 0 0 100%;
+  min-width: 100%;
+  gap: 32px;
+  padding: 0 24px;
+  animation: marquee-scroll 22s linear infinite;
+}
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+.marquee__item {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 190px;
+  height: 130px;
+  object-fit: contain;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 14px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee { animation: none; }
+}
+.sponsors-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 44px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--color-ink);
+}
+
 /* ---------- CTA banner ---------- */
 .cta-banner {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
