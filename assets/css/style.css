@@ -398,6 +398,15 @@ a { color: var(--color-teal); }
   aspect-ratio: 4 / 3;
 }
 .feature-media img { width: 100%; height: 100%; object-fit: cover; }
+.media-credit {
+  display: block;
+  text-align: right;
+  font-size: 0.78rem;
+  color: var(--color-text-soft);
+  margin-top: 8px;
+}
+.media-credit a { color: inherit; text-decoration: underline; }
+.media-credit a:hover { color: var(--color-primary); }
 
 /* Compact rows (Giving / Contact) */
 .compact-row {
@@ -873,7 +882,7 @@ a { color: var(--color-teal); }
   .hero { background-position: 75% center; }
 
   .feature-row { grid-template-columns: 1fr; }
-  .feature-media { order: -1; }
+  .feature-media, .feature-media-wrap { order: -1; }
   .compact-row { grid-template-columns: 1fr; padding: 32px; }
   .compact-media { order: -1; }
   .card-grid { grid-template-columns: repeat(2, 1fr); }
