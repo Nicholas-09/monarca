@@ -664,7 +664,7 @@ a { color: var(--color-teal); }
   justify-content: space-around;
   flex: 0 0 100%;
   min-width: 100%;
-  gap: 32px;
+  gap: 16px;
   padding: 0 24px;
   animation: marquee-scroll 22s linear infinite;
 }
@@ -675,14 +675,18 @@ a { color: var(--color-teal); }
 .marquee__item {
   flex-shrink: 0;
   box-sizing: border-box;
-  width: 190px;
-  height: 130px;
+  width: 260px;
+  height: 180px;
   object-fit: contain;
   background: var(--color-white);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-card);
   padding: 14px;
+}
+.marquee__item--cover {
+  object-fit: cover;
+  padding: 0;
 }
 @media (prefers-reduced-motion: reduce) {
   .marquee { animation: none; }
