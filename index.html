@@ -221,7 +221,7 @@
         <div class="compact-copy">
           <span class="eyebrow" data-es="Contáctanos">Contact Us</span>
           <h2 data-es="Nos encantaría saber de ti">We'd Love to Hear From You</h2>
-          <p data-es="¿Tienes preguntas sobre nuestros servicios, quieres ser voluntario o simplemente saludar? Escríbenos.">Have questions about our services, want to volunteer, or just want to say hello? Reach out below.</p>
+          <p><strong><span data-es="¿Quieres ser voluntario? ¿Quieres saber más?">Want to volunteer? Want to know more?</span></strong> <span data-es="Si te interesa conocer más sobre nuestros servicios, ser voluntario o tienes otra consulta, completa el formulario a continuación.">If you are interested in learning more about our services, volunteering, or for other inquiries, please fill out the form.</span></p>
           <div class="contact-info">
             <div class="contact-info-item">
               <span class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
@@ -254,6 +254,16 @@
               <label for="email" data-es="Correo Electrónico">Email</label>
               <input type="email" id="email" name="email" placeholder="you@example.com" required>
             </div>
+          </div>
+          <div>
+            <label for="inquiry" data-es="¿Qué te interesa?">What are you interested in?</label>
+            <select id="inquiry" name="inquiry" required>
+              <option value="" disabled selected data-es="Selecciona una opción">Select an option</option>
+              <option value="learn-more" data-es="Conocer Más">Learn More</option>
+              <option value="volunteering" data-es="Voluntariado">Volunteering</option>
+              <option value="sponsorship" data-es="Ser Patrocinador">Becoming a Sponsor</option>
+              <option value="other" data-es="Otra Consulta">Other Inquiry</option>
+            </select>
           </div>
           <div>
             <label for="message" data-es="Mensaje">Message</label>
