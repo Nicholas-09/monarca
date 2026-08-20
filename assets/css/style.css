@@ -144,7 +144,7 @@ a { color: var(--color-teal); }
   gap: 12px;
   text-decoration: none;
 }
-.brand img { width: 140px; height: 140px; }
+.brand img { width: 170px; height: 170px; }
 
 .main-nav ul {
   display: flex;
@@ -865,7 +865,7 @@ a { color: var(--color-teal); }
   .main-nav a { display: block; padding: 14px 6px; width: 100%; border-bottom: 1px solid var(--color-border); }
   .nav-toggle { display: block; }
   .header-cta { gap: 8px; }
-  .brand img { width: 92px; height: 92px; }
+  .brand img { width: 112px; height: 112px; }
   .follow-us-arrow, .follow-us-label { display: none; }
   .lang-toggle button { padding: 5px 8px; font-size: 0.7rem; }
 
