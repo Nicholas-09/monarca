@@ -651,6 +651,69 @@ a { color: var(--color-teal); }
   .banner-track { animation: none; }
 }
 
+/* ---------- Board of directors ---------- */
+.section-head h3 { font-size: clamp(1.25rem, 2.1vw, 1.5rem); }
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.board-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  box-shadow: var(--shadow-card);
+}
+.board-card .avatar {
+  flex: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--color-cream-deep);
+  color: var(--color-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.board-card h4 { margin: 0; font-size: 1rem; }
+.board-card span {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-primary-dark);
+  margin-top: 2px;
+}
+.board-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 48px 0 40px;
+  color: var(--color-text-soft);
+  font-size: 1.5rem;
+}
+.board-divider::before,
+.board-divider::after {
+  content: "";
+  height: 1px;
+  width: 80px;
+  background: var(--color-border);
+}
+.board-co-directors {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.board-co-directors .board-card { min-width: 260px; }
+
 /* ---------- Champion sponsors ---------- */
 .sponsors { overflow: hidden; }
 .marquee-wrap {
@@ -685,7 +748,7 @@ a { color: var(--color-teal); }
   padding: 14px;
 }
 .marquee__item--cover {
-  width: 180px;
+  width: 205px;
   height: 180px;
   object-fit: cover;
   padding: 0;
@@ -817,6 +880,7 @@ a { color: var(--color-teal); }
   .card-grid { grid-template-columns: repeat(2, 1fr); }
   .value-grid { grid-template-columns: repeat(2, 1fr); }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .board-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -825,6 +889,7 @@ a { color: var(--color-teal); }
   .card-grid { grid-template-columns: 1fr; }
   .value-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
+  .board-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .contact-form .field-row { grid-template-columns: 1fr; }
   .cta-banner { padding: 36px 28px; flex-direction: column; align-items: flex-start; }
