@@ -134,7 +134,7 @@ a { color: var(--color-teal); }
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
-  min-height: 56px;
+  min-height: 84px;
   gap: 16px;
 }
 
