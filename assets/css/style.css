@@ -279,7 +279,7 @@ a { color: var(--color-teal); }
     linear-gradient(100deg, rgba(20, 14, 10, 0.55) 0%, rgba(20, 14, 10, 0.22) 45%, rgba(20, 14, 10, 0.4) 100%),
     url("../img/hero-bg.webp") left top / cover no-repeat;
   color: var(--color-white);
-  padding: 72px 0 88px;
+  padding: 48px 0 60px;
 }
 .hero .container {
   display: flex;
