@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Monarca Initiative logo">
+  <circle cx="50" cy="50" r="50" fill="#241C15"/>
+  <g transform="translate(50 56)">
+    <g stroke="#FFF8F0" stroke-width="2.4" stroke-linecap="round" fill="none">
+      <path d="M0 -18 C -5 -25 -3 -30 0 -33"/>
+      <path d="M0 -18 C 5 -25 3 -30 0 -33"/>
+    </g>
+    <g transform="rotate(-10)">
+      <ellipse cx="-19" cy="-11" rx="21" ry="16" fill="#E8590C"/>
+      <ellipse cx="-16" cy="-12" rx="13" ry="9" fill="#241C15"/>
+      <circle cx="-24" cy="-17" r="2" fill="#FFF8F0"/>
+    </g>
+    <g transform="rotate(10)">
+      <ellipse cx="19" cy="-11" rx="21" ry="16" fill="#E8590C"/>
+      <ellipse cx="16" cy="-12" rx="13" ry="9" fill="#241C15"/>
+      <circle cx="24" cy="-17" r="2" fill="#FFF8F0"/>
+    </g>
+    <g transform="rotate(-16)">
+      <ellipse cx="-13" cy="9" rx="14" ry="11" fill="#F2A33D"/>
+      <ellipse cx="-11" cy="8" rx="8" ry="6" fill="#241C15"/>
+    </g>
+    <g transform="rotate(16)">
+      <ellipse cx="13" cy="9" rx="14" ry="11" fill="#F2A33D"/>
+      <ellipse cx="11" cy="8" rx="8" ry="6" fill="#241C15"/>
+    </g>
+    <ellipse cx="0" cy="-2" rx="2.4" ry="20" fill="#FFF8F0"/>
+    <circle cx="0" cy="-19" r="3" fill="#FFF8F0"/>
+  </g>
+</svg>

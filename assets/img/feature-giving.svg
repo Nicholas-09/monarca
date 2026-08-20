@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Monarca Initiative illustration">
+  <defs>
+    <radialGradient id="bg" cx="30%" cy="25%" r="85%">
+      <stop offset="0%" stop-color="#FDEDE0"/>
+      <stop offset="100%" stop-color="#F8C9A0"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="480" fill="url(#bg)"/>
+  <circle cx="540" cy="90" r="120" fill="#1F6F63" opacity="0.18"/>
+  <circle cx="70" cy="420" r="150" fill="#B8460A" opacity="0.16"/>
+
+  <g transform="translate(320 250)">
+    <g stroke="#241C15" stroke-width="6" stroke-linecap="round" fill="none">
+      <path d="M0 -70 C -14 -92 -10 -108 0 -118"/>
+      <path d="M0 -70 C 14 -92 10 -108 0 -118"/>
+    </g>
+    <g transform="rotate(-8)">
+      <ellipse cx="-118" cy="-70" rx="130" ry="95" fill="#E8590C"/>
+      <ellipse cx="-100" cy="-72" rx="86" ry="60" fill="#241C15"/>
+      <circle cx="-150" cy="-100" r="10" fill="#FFD9A8"/>
+      <circle cx="-96" cy="-118" r="7" fill="#FFD9A8"/>
+      <circle cx="-150" cy="-40" r="8" fill="#FFD9A8"/>
+    </g>
+    <g transform="rotate(8)">
+      <ellipse cx="118" cy="-70" rx="130" ry="95" fill="#E8590C"/>
+      <ellipse cx="100" cy="-72" rx="86" ry="60" fill="#241C15"/>
+      <circle cx="150" cy="-100" r="10" fill="#FFD9A8"/>
+      <circle cx="96" cy="-118" r="7" fill="#FFD9A8"/>
+      <circle cx="150" cy="-40" r="8" fill="#FFD9A8"/>
+    </g>
+    <g transform="rotate(-14)">
+      <ellipse cx="-84" cy="46" rx="86" ry="66" fill="#E8590C"/>
+      <ellipse cx="-72" cy="44" rx="54" ry="40" fill="#241C15"/>
+      <circle cx="-110" cy="30" r="7" fill="#FFD9A8"/>
+      <circle cx="-70" cy="72" r="6" fill="#FFD9A8"/>
+    </g>
+    <g transform="rotate(14)">
+      <ellipse cx="84" cy="46" rx="86" ry="66" fill="#E8590C"/>
+      <ellipse cx="72" cy="44" rx="54" ry="40" fill="#241C15"/>
+      <circle cx="110" cy="30" r="7" fill="#FFD9A8"/>
+      <circle cx="70" cy="72" r="6" fill="#FFD9A8"/>
+    </g>
+    <ellipse cx="0" cy="-10" rx="12" ry="110" fill="#241C15"/>
+    <circle cx="0" cy="-108" r="16" fill="#241C15"/>
+  </g>
+
+  <g opacity="0.5" fill="#1F6F63">
+    <circle cx="90" cy="90" r="5"/>
+    <circle cx="130" cy="70" r="4"/>
+    <circle cx="560" cy="360" r="5"/>
+    <circle cx="590" cy="400" r="4"/>
+  </g>
+</svg>
