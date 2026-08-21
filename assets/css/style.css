@@ -792,17 +792,6 @@ h2.brand-heading { margin-bottom: 18px; }
 .marquee__item {
   flex-shrink: 0;
   box-sizing: border-box;
-  width: 260px;
-  height: 180px;
-  object-fit: contain;
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-card);
-  padding: 14px;
-}
-.marquee__item--cover {
-  width: 210px;
   height: 180px;
   object-fit: cover;
   padding: 0;
@@ -810,6 +799,9 @@ h2.brand-heading { margin-bottom: 18px; }
   box-shadow: none;
   border-radius: var(--radius-md);
 }
+.marquee__item--cover { width: 210px; }
+.marquee__item--square { width: 180px; }
+.marquee__item--wide { width: 480px; }
 @media (prefers-reduced-motion: reduce) {
   .marquee { animation: none; }
 }
