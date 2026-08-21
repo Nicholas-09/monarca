@@ -404,7 +404,7 @@ a { color: var(--color-teal); }
 .feature-media--portrait { aspect-ratio: 5 / 4; }
 .feature-media--portrait img { object-position: center bottom; }
 .feature-copy--centered { text-align: center; }
-.feature-copy--centered p { margin-left: auto; margin-right: auto; }
+.feature-copy--centered p { margin-left: auto; margin-right: auto; font-size: 1.25rem; }
 .brand-heading { color: var(--color-primary); }
 h2.brand-heading { font-size: clamp(2rem, 4.5vw, 3rem); margin-bottom: 18px; }
 h3.brand-heading { font-size: clamp(1.5rem, 3vw, 2.1rem); }
