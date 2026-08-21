@@ -405,6 +405,7 @@ a { color: var(--color-teal); }
 .feature-media--portrait img { object-position: center bottom; }
 .feature-media--badge { aspect-ratio: 1 / 1; box-shadow: none; background: none; max-width: 380px; margin: 0 auto; }
 .feature-media--badge img { object-fit: contain; }
+.feature-media--banner { aspect-ratio: 2 / 1; box-shadow: none; background: none; max-width: 460px; margin: 0 auto; }
 .feature-copy--centered { text-align: center; }
 .feature-copy--centered p { margin-left: auto; margin-right: auto; font-size: 1.25rem; }
 .brand-heading { color: var(--color-primary); font-size: clamp(2rem, 4.5vw, 3rem); }
@@ -697,23 +698,24 @@ h2.brand-heading { margin-bottom: 18px; }
 
 /* ---------- Board of directors ---------- */
 .section-head h3 { font-size: clamp(1.25rem, 2.1vw, 1.5rem); }
-.leadership-columns {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 16px 56px;
-  align-items: start;
-}
-.leadership-col h2,
-.leadership-col h3 {
+.leadership-title {
+  text-align: center;
   font-size: clamp(1.3rem, 2.2vw, 1.6rem);
-  margin-bottom: 20px;
+  margin: 0 0 24px;
 }
 .board-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px 24px;
 }
-.leadership-col .board-grid { grid-template-columns: 1fr; }
+.board-grid--split {
+  grid-auto-flow: column;
+  grid-template-rows: repeat(5, auto);
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 56px;
+  max-width: 720px;
+  margin: 0 auto;
+}
 .board-card {
   display: flex;
   align-items: center;
@@ -765,8 +767,6 @@ h2.brand-heading { margin-bottom: 18px; }
   flex-wrap: wrap;
 }
 .board-co-directors .board-card { min-width: 260px; }
-.board-co-directors--stack { flex-direction: column; align-items: stretch; }
-.board-co-directors--stack .board-card { min-width: 0; }
 
 /* ---------- Champion sponsors ---------- */
 .sponsors { overflow: hidden; }
@@ -930,7 +930,6 @@ h2.brand-heading { margin-bottom: 18px; }
   .value-grid { grid-template-columns: repeat(2, 1fr); }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
   .board-grid { grid-template-columns: repeat(2, 1fr); }
-  .leadership-columns { grid-template-columns: 1fr; gap: 40px; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -940,6 +939,7 @@ h2.brand-heading { margin-bottom: 18px; }
   .value-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
   .board-grid { grid-template-columns: 1fr; }
+  .board-grid--split { grid-auto-flow: row; grid-template-rows: none; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .contact-form .field-row { grid-template-columns: 1fr; }
   .cta-banner { padding: 36px 28px; flex-direction: column; align-items: flex-start; }
