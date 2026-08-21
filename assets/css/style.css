@@ -405,7 +405,6 @@ a { color: var(--color-teal); }
 .feature-media--portrait img { object-position: center bottom; }
 .feature-media--badge { aspect-ratio: 1 / 1; box-shadow: none; background: none; max-width: 380px; margin: 0 auto; }
 .feature-media--badge img { object-fit: contain; }
-.feature-media--banner { aspect-ratio: 2 / 1; box-shadow: none; background: none; max-width: 460px; margin: 0 auto; }
 .feature-copy--centered { text-align: center; }
 .feature-copy--centered p { margin-left: auto; margin-right: auto; font-size: 1.25rem; }
 .brand-heading { color: var(--color-primary); font-size: clamp(2rem, 4.5vw, 3rem); }
