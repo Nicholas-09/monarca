@@ -801,15 +801,6 @@ h2.brand-heading { margin-bottom: 18px; }
   box-shadow: var(--shadow-card);
   padding: 14px;
 }
-.marquee__item--cover {
-  width: 210px;
-  height: 180px;
-  object-fit: cover;
-  padding: 0;
-  border: none;
-  box-shadow: none;
-  border-radius: var(--radius-md);
-}
 @media (prefers-reduced-motion: reduce) {
   .marquee { animation: none; }
 }
