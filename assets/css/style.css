@@ -513,9 +513,9 @@ h2.brand-heading { margin-bottom: 18px; }
   margin-top: 8px;
 }
 .payment-qr img {
-  width: 56px;
-  height: 56px;
-  padding: 4px;
+  width: 96px;
+  height: 96px;
+  padding: 6px;
   background: var(--color-white);
   border: 1px solid var(--color-border);
   border-radius: 6px;
@@ -581,6 +581,7 @@ h2.brand-heading { margin-bottom: 18px; }
 .card-media img { width: 100%; height: 100%; object-fit: cover; }
 .card-media--contain { aspect-ratio: 4 / 3; background: var(--color-cream-deep); }
 .card-media--contain img { object-fit: contain; }
+.swipe-dots { display: none; }
 .card-body { padding: 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
 .card-date {
   font-family: var(--font-heading);
@@ -698,7 +699,9 @@ h2.brand-heading { margin-bottom: 18px; }
 }
 .banner-item {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
+  line-height: 1;
   color: #000;
   font-family: var(--font-heading);
   font-weight: 700;
@@ -708,6 +711,10 @@ h2.brand-heading { margin-bottom: 18px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .banner-track { animation: none; }
+}
+@media (max-width: 620px) {
+  .banner-container { height: 3.4rem; }
+  .banner-item { font-size: 0.92rem; padding: 0.6rem 1rem; }
 }
 
 /* ---------- Board of directors ---------- */
@@ -964,12 +971,24 @@ h2.brand-heading { margin-bottom: 18px; }
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    padding: 4px 24px 14px;
+    padding: 4px 9% 6px;
     margin: 0 -24px;
   }
-  .card-grid--swipe .card-swipe-row + .card-swipe-row { margin-top: 4px; }
-  .card-grid--swipe .card { flex: 0 0 82%; scroll-snap-align: start; }
-  .card-grid--swipe.card-grid--big .card { flex: 0 0 94%; }
+  .card-grid--swipe .card { flex: 0 0 82%; scroll-snap-align: center; }
+  .card-grid--swipe.card-grid--big .card-swipe-row { padding: 4px 6% 6px; }
+  .card-grid--swipe.card-grid--big .card { flex: 0 0 88%; }
+  .swipe-dots { display: flex; justify-content: center; align-items: center; gap: 8px; margin: 4px 0 18px; }
+  .swipe-dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: var(--color-border);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  .swipe-dot.active { background: var(--color-primary); transform: scale(1.3); }
   .value-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
   .board-grid { grid-template-columns: 1fr; }

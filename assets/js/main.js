@@ -81,9 +81,65 @@
     });
   }
 
+  /* ---------- Swipe card dots (mobile carousels) ---------- */
+  function initSwipeDots() {
+    document.querySelectorAll(".card-grid--swipe .card-swipe-row").forEach(function (row) {
+      var cards = Array.prototype.slice.call(row.children).filter(function (el) {
+        return el.classList.contains("card");
+      });
+      if (cards.length < 2) return;
+
+      var dotsWrap = document.createElement("div");
+      dotsWrap.className = "swipe-dots";
+
+      var dots = cards.map(function (card, i) {
+        var dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "swipe-dot" + (i === 0 ? " active" : "");
+        dot.setAttribute("aria-label", "Go to slide " + (i + 1));
+        dot.addEventListener("click", function () {
+          card.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+        });
+        dotsWrap.appendChild(dot);
+        return dot;
+      });
+
+      row.insertAdjacentElement("afterend", dotsWrap);
+
+      var ticking = false;
+      row.addEventListener(
+        "scroll",
+        function () {
+          if (ticking) return;
+          ticking = true;
+          requestAnimationFrame(function () {
+            var rowRect = row.getBoundingClientRect();
+            var center = rowRect.left + rowRect.width / 2;
+            var closest = 0;
+            var closestDist = Infinity;
+            cards.forEach(function (card, i) {
+              var r = card.getBoundingClientRect();
+              var dist = Math.abs(r.left + r.width / 2 - center);
+              if (dist < closestDist) {
+                closestDist = dist;
+                closest = i;
+              }
+            });
+            dots.forEach(function (dot, i) {
+              dot.classList.toggle("active", i === closest);
+            });
+            ticking = false;
+          });
+        },
+        { passive: true }
+      );
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initNavToggle();
     initLangToggle();
     initYear();
+    initSwipeDots();
   });
 })();
