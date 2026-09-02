@@ -435,6 +435,7 @@ h2.brand-heading { margin-bottom: 18px; }
   padding: 48px;
   box-shadow: var(--shadow-card);
 }
+.compact-row > * { min-width: 0; }
 .compact-row + .compact-row { margin-top: 32px; }
 .compact-copy h2 { font-size: clamp(1.5rem, 2.6vw, 1.9rem); }
 .compact-copy p { color: var(--color-text-soft); }
@@ -463,8 +464,12 @@ h2.brand-heading { margin-bottom: 18px; }
 }
 
 /* ---------- Contact form ---------- */
-.contact-form { display: grid; gap: 16px; }
+.contact-form { display: grid; gap: 16px; min-width: 0; }
 .contact-form .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.contact-form .field-row > * { min-width: 0; }
+.contact-form input,
+.contact-form select,
+.contact-form textarea { max-width: 100%; }
 .contact-form label {
   display: block;
   font-family: var(--font-heading);
@@ -530,8 +535,10 @@ h2.brand-heading { margin-bottom: 18px; }
   color: var(--color-teal);
   display: flex; align-items: center; justify-content: center;
 }
+.contact-info-item > div { min-width: 0; }
 .contact-info-item h4 { margin-bottom: 2px; font-size: 1rem; }
-.contact-info-item p { margin: 0; color: var(--color-text-soft); font-size: 0.95rem; }
+.contact-info-item p { margin: 0; color: var(--color-text-soft); font-size: 0.95rem; overflow-wrap: anywhere; }
+.contact-info-item a { overflow-wrap: anywhere; }
 
 .impact-list {
   list-style: none;
@@ -560,6 +567,7 @@ h2.brand-heading { margin-bottom: 18px; }
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
+.card-swipe-row { display: contents; }
 .card {
   background: var(--color-white);
   border: 1px solid var(--color-border);
@@ -943,6 +951,18 @@ h2.brand-heading { margin-bottom: 18px; }
 @media (max-width: 620px) {
   .section { padding: 64px 0; }
   .card-grid { grid-template-columns: 1fr; }
+  .card-grid--swipe { display: block; }
+  .card-grid--swipe .card-swipe-row {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 4px 24px 14px;
+    margin: 0 -24px;
+  }
+  .card-grid--swipe .card-swipe-row + .card-swipe-row { margin-top: 4px; }
+  .card-grid--swipe .card { flex: 0 0 82%; scroll-snap-align: start; }
   .value-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
   .board-grid { grid-template-columns: 1fr; }
