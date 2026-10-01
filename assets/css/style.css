@@ -806,42 +806,20 @@ h2.brand-heading { margin-bottom: 18px; }
 .board-co-directors--stack .board-card { min-width: 0; }
 
 /* ---------- Champion sponsors ---------- */
-.sponsors { overflow: hidden; }
-.marquee-wrap {
-  overflow: hidden;
-  width: 100%;
-  display: flex;
-}
-.marquee {
-  display: flex;
+.sponsors-grid { margin-top: 36px; }
+.sponsor-card {
   align-items: center;
-  justify-content: space-around;
-  flex: 0 0 100%;
-  min-width: 100%;
-  gap: 16px;
-  padding: 0 24px;
-  animation: marquee-scroll 22s linear infinite;
+  justify-content: center;
 }
-@keyframes marquee-scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
-}
-.marquee__item {
-  flex-shrink: 0;
-  box-sizing: border-box;
-  width: 260px;
-  height: 180px;
+.sponsor-card img {
+  display: block;
+  width: 100%;
+  height: 170px;
   object-fit: contain;
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-card);
   padding: 14px;
+  box-sizing: border-box;
 }
-.marquee__item--fill { width: 210px; object-fit: cover; padding: 0; }
-@media (prefers-reduced-motion: reduce) {
-  .marquee { animation: none; }
-}
+.sponsor-card--fill img { object-fit: cover; padding: 0; height: 100%; }
 .sponsors-cta {
   display: flex;
   flex-direction: column;
