@@ -393,6 +393,16 @@ a { color: var(--color-teal); }
 .feature-list svg { flex: none; width: 18px; height: 18px; margin-top: 3px; color: var(--color-teal); }
 .feature-list .flag-icon { flex: none; font-size: 1.15rem; line-height: 1; margin-top: 1px; }
 
+.pull-quote {
+  margin: 0 0 18px;
+  padding: 14px 20px;
+  border-left: 3px solid var(--color-primary);
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--color-text);
+}
+
 .feature-media {
   position: relative;
   border-radius: var(--radius-lg);
